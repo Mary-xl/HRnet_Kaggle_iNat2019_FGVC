@@ -53,7 +53,7 @@ class Params:
     #train_file = './train2019.json'
     val_file = './data/test2019.json'
     #val_file = './test2019.json'
-    data_root = '/data/iNat2019_FGVC/'
+    data_root = os.path.dirname(os.path.abspath('model.py'))
     save_path = os.path.join(data_root,'models_{}_exp{}'.format(arch, exp_name))
 
     # set evaluate to True to run the test set
@@ -61,7 +61,7 @@ class Params:
     save_preds = True
     op_file_name = 'hr64_448_balance_finetune_nocutout_val_e8.csv' # submission file
     if evaluate == True:
-        val_file = './data/test2019.json'
+        val_file = '/test2019.json'
 
 best_prec3 = 0.0  # store current best top 3
 

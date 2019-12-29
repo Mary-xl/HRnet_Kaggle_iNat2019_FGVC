@@ -53,7 +53,7 @@ class Params:
     #train_file = './train2019.json'
     val_file = './data/test2019.json'
     #val_file = './test2019.json'
-    data_root = '/data/iNat2019_FGVC/'
+    data_root = './data'
     save_path = os.path.join(data_root,'models_{}_exp{}'.format(arch, exp_name))
 
     # set evaluate to True to run the test set
